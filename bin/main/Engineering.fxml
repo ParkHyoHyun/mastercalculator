@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.StackPane?>
+
+<StackPane prefHeight="300.0" prefWidth="500.0" style="-fx-background-color: #eeeeee;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.EngineeringController">
+   <children>
+   <BorderPane prefHeight="300.0" prefWidth="500.0">
+      <top>
+         <MenuBar prefHeight="25.0" prefWidth="500.0" BorderPane.alignment="CENTER">
+           <menus>
+             <Menu mnemonicParsing="false" text="File">
+               <items>
+                 <MenuItem mnemonicParsing="false" text="Import" />
+                    <SeparatorMenuItem mnemonicParsing="false" />
+                 <MenuItem mnemonicParsing="false" text="Export" />
+                    <SeparatorMenuItem mnemonicParsing="false" />
+                 <MenuItem mnemonicParsing="false" text="Exit" />
+               </items>
+             </Menu>
+             <Menu mnemonicParsing="false" text="View">
+               <items>
+                 <MenuItem mnemonicParsing="false" onAction="#handleBtnSubject" text="Subject Score" />
+                    <SeparatorMenuItem mnemonicParsing="false" />
+                 <MenuItem mnemonicParsing="false" onAction="#handleBtnMilitary" text="Military" />
+                    <SeparatorMenuItem mnemonicParsing="false" />
+                 <MenuItem mnemonicParsing="false" onAction="#handleBtnSaving" text="Savings" />
+               </items>
+             </Menu>
+             <Menu mnemonicParsing="false" text="Help">
+               <items>
+                 <MenuItem mnemonicParsing="false" text="About Us" />
+                    <SeparatorMenuItem mnemonicParsing="false" />
+                 <MenuItem mnemonicParsing="false" text="Promgram Info" />
+               </items>
+             </Menu>
+           </menus>
+         </MenuBar>
+      </top>
+      <center>
+         <AnchorPane prefHeight="275.0" prefWidth="500.0" BorderPane.alignment="CENTER">
+            <children>
+               <TextArea disable="true" layoutX="17.0" layoutY="15.0" prefHeight="80.0" prefWidth="330.0" style="-fx-background-color: white; -fx-border-color: black;" />
+               <ListView disable="true" layoutX="364.0" layoutY="15.0" prefHeight="235.0" prefWidth="119.0" style="-fx-background-color: white; -fx-border-color: black;" />
+               <GridPane layoutX="11.0" layoutY="105.0">
+                 <columnConstraints>
+                   <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="49.0" />
+                   <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="49.0" />
+                     <ColumnConstraints halignment="CENTER" prefWidth="49.0" />
+                     <ColumnConstraints halignment="CENTER" minWidth="10.0" prefWidth="49.0" />
+                     <ColumnConstraints halignment="CENTER" minWidth="10.0" prefWidth="49.0" />
+                     <ColumnConstraints halignment="CENTER" minWidth="10.0" prefWidth="49.0" />
+                     <ColumnConstraints halignment="CENTER" minWidth="10.0" prefWidth="49.0" />
+                 </columnConstraints>
+                 <rowConstraints>
+                   <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+                   <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+                   <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+                   <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+                   <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+                 </rowConstraints>
+                  <children>
+                     <Button fx:id="btnMilitary" mnemonicParsing="false" prefHeight="20.0" prefWidth="39.0" text="N!" />
+                     <Button mnemonicParsing="false" prefHeight="20.0" prefWidth="37.0" text="(" GridPane.columnIndex="1" />
+                     <Button mnemonicParsing="false" prefHeight="20.0" prefWidth="37.0" text=")" GridPane.columnIndex="2" />
+                     <Button mnemonicParsing="false" prefHeight="20.0" prefWidth="37.0" text="←" GridPane.columnIndex="3" />
+                     <Button mnemonicParsing="false" prefHeight="20.0" prefWidth="37.0" text="CE" GridPane.columnIndex="4" />
+                     <Button mnemonicParsing="false" prefHeight="20.0" prefWidth="37.0" text="C" GridPane.columnIndex="5" />
+                     <Button mnemonicParsing="false" prefHeight="20.0" prefWidth="39.0" text="/" GridPane.columnIndex="6" />
+                     <Button mnemonicParsing="false" prefHeight="20.0" prefWidth="37.0" text="Sin" GridPane.rowIndex="1" />
+                     <Button mnemonicParsing="false" prefHeight="20.0" prefWidth="37.0" text="Cos" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                        <font>
+                           <Font size="11.0" />
+                        </font>
+                     </Button>
+                     <Button mnemonicParsing="false" prefHeight="20.0" prefWidth="37.0" text="Tan" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                        <font>
+                           <Font size="11.0" />
+                        </font>
+                     </Button>
+                     <Button mnemonicParsing="false" prefHeight="20.0" prefWidth="37.0" text="1" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                     <Button mnemonicParsing="false" prefHeight="20.0" prefWidth="37.0" text="2" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+                     <Button mnemonicParsing="false" prefHeight="20.0" prefWidth="37.0" text="3" GridPane.columnIndex="5" GridPane.rowIndex="1" />
+                     <Button mnemonicParsing="false" prefHeight="20.0" prefWidth="37.0" text="*" GridPane.columnIndex="6" GridPane.rowIndex="1" />
+                     <Button mnemonicParsing="false" prefHeight="20.0" prefWidth="37.0" text="Sinh" GridPane.rowIndex="2">
+                        <font>
+                           <Font size="10.0" />
+                        </font>
+                     </Button>
+                     <Button mnemonicParsing="false" prefHeight="20.0" prefWidth="37.0" text="Cosh" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                        <font>
+                           <Font size="9.0" />
+                        </font>
+                     </Button>
+                     <Button mnemonicParsing="false" prefHeight="20.0" prefWidth="39.0" text="Tanh" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                        <font>
+                           <Font size="10.0" />
+                        </font>
+                     </Button>
+                     <Button mnemonicParsing="false" prefHeight="20.0" prefWidth="37.0" text="4" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                     <Button mnemonicParsing="false" prefHeight="20.0" prefWidth="37.0" text="5" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+                     <Button mnemonicParsing="false" prefHeight="20.0" prefWidth="37.0" text="6" GridPane.columnIndex="5" GridPane.rowIndex="2" />
+                     <Button mnemonicParsing="false" prefHeight="20.0" prefWidth="37.0" text="-" GridPane.columnIndex="6" GridPane.rowIndex="2" />
+                     <Button mnemonicParsing="false" prefHeight="20.0" prefWidth="37.0" text="X^n" GridPane.rowIndex="3">
+                        <font>
+                           <Font size="10.0" />
+                        </font>
+                     </Button>
+                     <Button mnemonicParsing="false" prefHeight="20.0" prefWidth="37.0" text="10^n" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                        <font>
+                           <Font size="9.0" />
+                        </font>
+                     </Button>
+                     <Button mnemonicParsing="false" prefHeight="20.0" prefWidth="37.0" text="√" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                     <Button mnemonicParsing="false" prefHeight="20.0" prefWidth="37.0" text="7" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+                     <Button mnemonicParsing="false" prefHeight="20.0" prefWidth="37.0" text="8" GridPane.columnIndex="4" GridPane.rowIndex="3" />
+                     <Button mnemonicParsing="false" prefHeight="20.0" prefWidth="37.0" text="9" GridPane.columnIndex="5" GridPane.rowIndex="3" />
+                     <Button mnemonicParsing="false" prefHeight="20.0" prefWidth="37.0" text="+" GridPane.columnIndex="6" GridPane.rowIndex="3" />
+                     <Button mnemonicParsing="false" prefHeight="20.0" prefWidth="37.0" text="Mod" GridPane.rowIndex="4">
+                        <font>
+                           <Font size="10.0" />
+                        </font>
+                     </Button>
+                     <Button mnemonicParsing="false" prefHeight="20.0" prefWidth="37.0" text="Log" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                        <font>
+                           <Font size="11.0" />
+                        </font>
+                     </Button>
+                     <Button mnemonicParsing="false" prefHeight="20.0" prefWidth="37.0" text="π" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+                     <Button mnemonicParsing="false" prefHeight="20.0" prefWidth="37.0" text="0" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+                     <Button mnemonicParsing="false" prefHeight="20.0" prefWidth="37.0" text="." GridPane.columnIndex="4" GridPane.rowIndex="4" />
+                     <Button mnemonicParsing="false" prefHeight="20.0" prefWidth="37.0" text="=" GridPane.columnIndex="5" GridPane.rowIndex="4" />
+                     <Button mnemonicParsing="false" prefHeight="20.0" prefWidth="37.0" text="\%" GridPane.columnIndex="6" GridPane.rowIndex="4" />
+                  </children>
+               </GridPane>
+            </children>
+         </AnchorPane>
+      </center>
+   </BorderPane>
+   </children>
+</StackPane>

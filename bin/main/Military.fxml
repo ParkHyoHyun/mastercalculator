@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane fx:id="military" prefHeight="300.0" prefWidth="500.0" style="-fx-background-color: #eeeeee;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.MilitaryController">
+	<top>
+      <MenuBar prefHeight="25.0" prefWidth="500.0" BorderPane.alignment="CENTER">
+        <menus>
+                <Menu mnemonicParsing="false" text="File">
+            	  <items>
+             		 <MenuItem mnemonicParsing="false" text="Import" />
+                	 	<SeparatorMenuItem mnemonicParsing="false" />
+             		 <MenuItem mnemonicParsing="false" text="Export" />
+               		    <SeparatorMenuItem mnemonicParsing="false" />
+              		 <MenuItem mnemonicParsing="false" text="Exit" />
+           		  </items>
+          	 </Menu>
+                <Menu mnemonicParsing="false" text="View">
+                  <items>
+                    <MenuItem mnemonicParsing="false" onAction="#handleBtnEngineering" text="Engineering" />
+                    	<SeparatorMenuItem mnemonicParsing="false" />
+                    <MenuItem mnemonicParsing="false" onAction="#handleBtnSubject" text="Subject Score" />
+                    	<SeparatorMenuItem mnemonicParsing="false" />
+                    <MenuItem mnemonicParsing="false" onAction="#handleBtnSaving" text="Savings" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Help">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="About Us" />
+                    	<SeparatorMenuItem mnemonicParsing="false" />
+                    <MenuItem mnemonicParsing="false" text="Promgram Info" />
+                  </items>
+                </Menu>
+              </menus>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+            </MenuBar>
+   </top>
+         <center>
+            <AnchorPane prefHeight="275.0" prefWidth="500.0" BorderPane.alignment="CENTER">
+               <children>
+            	  <Text layoutX="25.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold;" text="입대 일자 :" />
+                  <TextField fx:id="InDate" layoutX="104.0" layoutY="17.0" prefHeight="23.0" prefWidth="100.0" promptText="예) 20121021" />
+            	  <ComboBox fx:id="ComboBox" layoutX="229.0" layoutY="17.0" prefHeight="23.0" prefWidth="115.0" promptText="군별 선택">
+            	 	 <items>
+           				 <FXCollections fx:factory="observableArrayList">
+                			<String fx:value="육군/의경" />
+               			    <String fx:value="해군/해양의무경찰" />
+                			<String fx:value="공군" />
+           			        <String fx:value="해병" />
+            			    <String fx:value="사회복무요원" />
+            			    <String fx:value="의무소방" />
+          			    </FXCollections>
+        		    </items>
+           		 </ComboBox>
+           		 <Button fx:id="BtnCommute" layoutX="361.0" layoutY="17.0" mnemonicParsing="false" prefHeight="23.0" prefWidth="75.0" text="계산" />
+           		 <Button fx:id="BtnReset" layoutX="361.0" layoutY="54.0" mnemonicParsing="false" prefHeight="23.0" prefWidth="75.0" text="초기화" />
+           		 <Line endX="390.0" layoutX="100.0" layoutY="100.0" startX="-95.0" />
+           		 <Text fx:id="resetText" layoutX="25.0" layoutY="130.0" strokeType="OUTSIDE" strokeWidth="0.0" text="* 계산결과는 복무기간 변경 등으로 오차가 있을 수 있으니 자세한 사항은 병무청에서 확인하시기 바랍니다." textAlignment="CENTER" wrappingWidth="450.0" />
+          		 <Text fx:id="commuteText1" layoutX="25.0" layoutY="130.0" strokeType="OUTSIDE" strokeWidth="0.0" text="전역일 :" visible="false" />
+           		 <Label fx:id="commuteLabel1" layoutX="80.0" layoutY="118.0" prefHeight="15.0" prefWidth="85.0" text="2016.12.20" visible="false" />
+        		 <ProgressBar fx:id="commuteProbar" layoutX="50.0" layoutY="141.0" prefHeight="25.0" prefWidth="400.0" progress="0.0" visible="false" />
+         		 <Label fx:id="commuteLabel2" layoutX="238.0" layoutY="146.0" text="50%" visible="false" />
+            	 <Label fx:id="commuteLabel3" layoutX="29.0" layoutY="181.0" text="총 복무일" visible="false" />
+          	     <Label fx:id="commuteLabel4" layoutX="29.0" layoutY="209.0" text="현재 복무일" visible="false" />
+          	     <Label fx:id="commuteLabel5" layoutX="29.0" layoutY="237.0" text="남은 복무일" visible="false" />
+            	 <Label fx:id="commuteLabel6" layoutX="119.0" layoutY="181.0" text="667일" visible="false" />
+           		 <Label fx:id="commuteLabel7" layoutX="119.0" layoutY="209.0" text="337일" visible="false" />
+           		 <Label fx:id="commuteLabel8" layoutX="119.0" layoutY="237.0" text="300일" visible="false" />
+               </children>
+            </AnchorPane>
+         </center>
+</BorderPane>
